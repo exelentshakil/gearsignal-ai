@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-canvas: #f8fafc;
+    --color-surface: #ffffff;
+    --color-surface-hover: #f1f5f9;
+    --color-panel: #ffffff;
+    --color-panel-subtle: #f8fafc;
+    --color-border: #e2e8f0;
+    --color-border-subtle: #edf2f7;
+    --color-border-focus: #059669;
+
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #334155;
+    --color-text-muted: #64748b;
+
+    /* GearSignal Brand: Audio VU Meter Emerald & Warm Tube Amber */
+    --color-brand: #059669;
+    --color-brand-hover: #047857;
+    --color-brand-subtle: #ecfdf5;
+    --color-brand-accent: #10b981;
+    --color-brand-amber: #d97706;
+    --color-brand-amber-bg: #fffbeb;
+    --color-brand-indigo: #4f46e5;
+
+    /* Status Indicators */
+    --color-status-green: #059669;
+    --color-status-green-bg: #ecfdf5;
+    --color-status-green-border: #a7f3d0;
+
+    --color-status-blue: #2563eb;
+    --color-status-blue-bg: #eff6ff;
+    --color-status-blue-border: #bfdbfe;
+
+    --color-status-amber: #d97706;
+    --color-status-amber-bg: #fffbeb;
+    --color-status-amber-border: #fde68a;
+
+    --color-status-red: #dc2626;
+    --color-status-red-bg: #fef2f2;
+    --color-status-red-border: #fecaca;
+
+    --color-status-purple: #7c3aed;
+    --color-status-purple-bg: #f5f3ff;
+    --color-status-purple-border: #ddd6fe;
+
+    --color-status-slate: #64748b;
+    --color-status-slate-bg: #f8fafc;
+    --color-status-slate-border: #cbd5e1;
+  }
+
+  .dark {
+    --color-canvas: #090d16;
+    --color-surface: #0f172a;
+    --color-surface-hover: #1e293b;
+    --color-panel: #0f172a;
+    --color-panel-subtle: #141e33;
+    --color-border: #1e293b;
+    --color-border-subtle: #162032;
+    --color-border-focus: #10b981;
+
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+
+    --color-brand: #10b981;
+    --color-brand-hover: #34d399;
+    --color-brand-subtle: rgba(16, 185, 129, 0.12);
+    --color-brand-accent: #059669;
+    --color-brand-amber: #f59e0b;
+    --color-brand-amber-bg: rgba(245, 158, 11, 0.12);
+    --color-brand-indigo: #818cf8;
+
+    --color-status-green: #34d399;
+    --color-status-green-bg: rgba(16, 185, 129, 0.15);
+    --color-status-green-border: rgba(16, 185, 129, 0.3);
+
+    --color-status-blue: #60a5fa;
+    --color-status-blue-bg: rgba(59, 130, 246, 0.15);
+    --color-status-blue-border: rgba(59, 130, 246, 0.3);
+
+    --color-status-amber: #fbbf24;
+    --color-status-amber-bg: rgba(245, 158, 11, 0.15);
+    --color-status-amber-border: rgba(245, 158, 11, 0.3);
+
+    --color-status-red: #f87171;
+    --color-status-red-bg: rgba(239, 68, 68, 0.15);
+    --color-status-red-border: rgba(239, 68, 68, 0.3);
+
+    --color-status-purple: #a78bfa;
+    --color-status-purple-bg: rgba(167, 139, 250, 0.15);
+    --color-status-purple-border: rgba(167, 139, 250, 0.3);
+
+    --color-status-slate: #94a3b8;
+    --color-status-slate-bg: rgba(148, 163, 184, 0.15);
+    --color-status-slate-border: rgba(148, 163, 184, 0.3);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, kbd, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
